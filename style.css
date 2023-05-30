@@ -1,0 +1,122 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap'); */
+
+:root{
+    --emailbg: hsl(217, 28%, 15%);
+    --mainbg: hsl(218, 28%, 13%);
+    --footerbg: hsl(216, 53%, 9%);
+    --cyan: hsl(176, 68%, 64%);
+    --blue: hsl(198, 60%, 50%);
+    --error: hsl(0, 100%, 63%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--mainbg);
+    color : var(--white);
+    display: grid;
+    /* grid-template-rows: repeat(6, auto); */
+    align-items: center;
+    /* grid-auto-rows: minmax(300px, auto); */
+}
+
+a{
+    color: white !important;
+    text-decoration: none;
+}
+
+.banner-section{
+    background-color: var(--emailbg) !important;
+    background-image: url(images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    
+}
+
+
+.behind{
+    /* grid-row: 4/5; */
+    grid-row: 4/span 2;
+    padding-block-end: 10rem;
+}
+
+.gradient{
+    background: linear-gradient(to left, var(--cyan), var(--blue)) !important;
+    padding-block: .5rem;
+    width: 150px;
+    color: white;
+    border-radius: 9999px;
+    border: none;
+}
+
+.inner-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.features {
+   width: 700px;
+   max-width: 100%;
+   margin: auto !important;
+}
+
+.features .card{
+    border: none;
+    background-color: transparent !important;
+    color: white !important;
+    padding: 2em;
+    height: 100%;
+}
+
+.testimonials .card{
+    background-color: var(--emailbg);
+    border: none !important;
+    color:white ;
+    padding: 1em;
+    height: 100%;
+}
+
+.testimonials .card img{
+    border-radius: 100%;
+    width: 50px;
+}
+
+section, footer{
+    padding-block: 4rem;
+    height: 100%;
+    grid-column: 1/-1;
+    /*border: 2px red solid;*/
+}
+
+
+.overlap{
+    width: 500px;
+    max-width: 100%;
+    margin-inline: auto;
+    text-align: center;
+    grid-row: 5/span 2;
+    margin-top: 10rem !important;
+}
+
+.overlap .card{
+    background-color: var(--mainbg) !important;
+    color: white !important;
+}
+
+footer{
+    background-color: var(--footerbg);
+    grid-row: 6/span 2;
+    padding-block-start: 10rem;
+}
+
+@media (max-width: 400px){
+    .features, .overlap {
+       width :100% !important;
+    }
+
+    .overlap{
+        margin-top: 20rem;
+    }
+}
